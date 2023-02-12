@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <string>
+#include <ostream>
+#include <iostream>
 using namespace std;
 
 // funcs_0.cpp
@@ -24,4 +26,6 @@ void itc_pos_neg_analysis_lst(const vector <int> &lst);
 
 // Utility
 long long itc_len(string str);
+int itc_max_lst(const vector <int> &lst);
+int itc_min_lst(const vector <int> &lst);
 #endif

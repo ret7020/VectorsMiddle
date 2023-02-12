@@ -3,7 +3,7 @@
 vector <char> itc_strtlist(string str)
 {
 	vector<char> output;
-	for (int i = 0; i < str.size(); ++i) output.push_back(str[i]);
+	for (long long i = 0; i < str.size(); ++i) output.push_back(str[i]);
 	return output;
 }
 
@@ -27,5 +27,17 @@ string itc_rmstrspc(string str){
 
 
 string itc_rmstrchar(string str, string less){
-
+    string n = "";
+    int b = 0;
+    for (long long i = 0; str[i] != '\0'; ++i) {
+        for(long long j = 0; less[j] != '\0'; ++j) if (less[j] == str[i]) b = 1;
+        if (b == 0) n += str[i];
+        b = 0;
+    }
+    return n;
+}
+long itc_sumlst(const vector <int> &lst){
+    long long sum = 0;
+    if (lst.size() != 0) for(long long i = 0; i < lst.size(); ++i) sum += lst[i];
+    return sum;
 }
